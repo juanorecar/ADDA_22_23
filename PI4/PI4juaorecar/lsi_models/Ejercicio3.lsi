@@ -1,0 +1,34 @@
+head section
+
+Integer getNumeroInvestigadores()
+Integer getNumeroEspecialidades()
+Integer getNumeroTrabajos()
+Integer trabajadorEspecialidad(Integer i, Integer k)
+Integer diasDisponibles(Integer i)
+Integer diasNecesarios(Integer j, Integer k)
+Integer getCalidad(Integer j)
+Integer getMM()
+
+Integer n = getNumeroInvestigadores()
+Integer e = getNumeroEspecialidades()
+Integer m = getNumeroTrabajos()
+Integer MM = getMM()
+
+goal section
+
+max sum(getCalidad(j) y[j], j in 0 .. m) // MAX CALIDAD TRABAJOS
+
+constraints section
+
+sum(x[i,j], j in 0 .. m) <= diasDisponibles(i), i in 0 .. n // PARA CADA INVEST, SUM HORAS REALIZADAS EN CADA TRABJ <= HORAS DISPONIBLES DEL INVEST
+sum(trabajadorEspecialidad(i,k) x[i,j], i in 0 .. n) - diasNecesarios(j,k) y[j] = 0, j in 0 .. m, k in 0 .. e // PARA CADA ESPECIALIDAD EN CADA TRABAJO, SUM HORAS REALIZADAS CADA INVEST CON ESPECIALIDAD INDICADA = HORAS NECESARIAS
+x[i,j] - MM y[j] <= 0, j in 0 .. m, i in 0 .. n // PARA CADA INVEST EN CADA TRABAJO, SI TRABAJO J NO SE REALIZA, LAS HORAS REALIZADAS EN J = 0
+
+bounds section
+
+y[j] <= 1, j in 0 .. m // PARA TOMAR y[j] COMO BINARIA
+
+int
+
+x[i,j], i in 0 .. n, j in 0 .. m
+y[j], j in 0 .. m

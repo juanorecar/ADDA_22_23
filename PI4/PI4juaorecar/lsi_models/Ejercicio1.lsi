@@ -1,0 +1,22 @@
+head section
+
+Integer getNumeroTipos()
+Integer getNumeroVariedades()
+Integer getCantidad(Integer j)
+Integer getBeneficio(Integer i)
+Double getCantidadTipoVariedad(Integer j, Integer i)
+
+Integer n = getNumeroTipos()
+Integer m = getNumeroVariedades()
+
+goal section
+
+max sum(getBeneficio(i) x[i], i in 0 .. m)
+
+constraints section
+
+sum(getCantidadTipoVariedad(j,i) x[i], i in 0 .. m) <= getCantidad(j), j in 0 .. n // PARA CADA TIPO, NO SUPERAR CANTIDAD DISPONIBLE
+
+int
+
+x[i], i in 0 .. m

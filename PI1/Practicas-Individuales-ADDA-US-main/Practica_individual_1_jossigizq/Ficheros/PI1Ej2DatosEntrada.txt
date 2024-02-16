@@ -1,0 +1,6 @@
+10,20,adda
+20,30,segundo
+30,40,analisis
+40,50,dise�o
+50,75,algoritmo
+75,50,eficiente

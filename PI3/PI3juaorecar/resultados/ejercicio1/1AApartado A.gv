@@ -1,0 +1,4 @@
+strict digraph G {
+  1 [ color="red" label="Edu" ];
+  2 [ color="red" label="Sara" ];
+}

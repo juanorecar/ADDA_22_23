@@ -1,0 +1,21 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public static List<String> ejercicio1IterativoSimulacro(Integer varA, String varB, Integer varC, String
+			varD, Integer varE){
+		List<String> ls = new ArrayList<>();
+		EnteroCadena e = EnteroCadena.of(varA, varB);
+
+		while(e.a()<varC) {
+			String p = e.s()+varD;
+			if(p.length()<varE) {
+				if(!(ls.contains(p))) {
+					ls.add(p);
+				}
+				
+			}
+			e = e.nx();
+		}
+		return ls;
+	}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////

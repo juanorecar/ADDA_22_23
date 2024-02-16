@@ -1,0 +1,14 @@
+strict graph G {
+  1 [ color="blue" label="Ciudad5" ];
+  2 [ color="blue" label="Ciudad2" ];
+  3 [ color="blue" label="Ciudad4" ];
+  4 [ color="blue" label="Ciudad3" ];
+  5 [ color="blue" label="Ciudad1" ];
+  5 -- 2 [ color="blue" ];
+  4 -- 1 [ color="blue" ];
+  2 -- 4 [ color="blue" ];
+  3 -- 1 [ color="blue" ];
+  1 -- 5 [ color="blue" ];
+  2 -- 3 [ color="blue" ];
+  5 -- 4 [ color="blue" ];
+}
